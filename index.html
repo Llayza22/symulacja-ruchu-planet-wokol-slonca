@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symulacja Układu Planetarnego</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>☀️ Symulacja Układu Planetarnego</h1>
+        <p>Prawo powszechnego ciążenia Newtona</p>
+    </header>
+
+    <div class="main-content">
+
+        <canvas id="space"></canvas>
+
+        <aside class="panel">
+
+            <h2>Sterowanie</h2>
+
+            <label>
+                Masa Słońca
+                <span id="massValue">1.0x</span>
+            </label>
+
+            <input
+                type="range"
+                id="sunMass"
+                min="0.5"
+                max="3"
+                step="0.1"
+                value="1"
+            >
+
+            <label>
+                Prędkość czasu
+                <span id="speedValue">1x</span>
+            </label>
+
+            <input
+                type="range"
+                id="timeSpeed"
+                min="0.5"
+                max="10"
+                step="0.5"
+                value="1"
+            >
+
+            <div class="buttons">
+                <button id="startBtn">▶ Start</button>
+                <button id="pauseBtn">⏸ Pauza</button>
+                <button id="resetBtn">🔄 Reset</button>
+            </div>
+
+            <div class="info">
+                <h3>Informacje</h3>
+
+                <p><span class="planet earth"></span>Ziemia</p>
+                <p><span class="planet mars"></span>Mars</p>
+                <p><span class="planet venus"></span>Wenus</p>
+
+                <hr>
+
+                <p>Symulacja wykorzystuje:</p>
+                <ul>
+                    <li>Prawo Newtona</li>
+                    <li>Grawitację</li>
+                    <li>Przyspieszenie orbitalne</li>
+                </ul>
+            </div>
+
+        </aside>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
